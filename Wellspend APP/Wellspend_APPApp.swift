@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct Wellspend_APPApp: App {
+	@State private var transactions = transactionsFake
+	@State private var accounts = accountsFake
     var body: some Scene {
+		
         WindowGroup {
-            ContentView()
+			NavigationStack {
+				Dashboard(transactions: $transactions,accounts: $accounts)
+			}
+      
         }
     }
 }

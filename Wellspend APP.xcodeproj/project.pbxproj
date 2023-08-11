@@ -8,18 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		30CDEAB52A70376000381CE8 /* Wellspend_APPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAB42A70376000381CE8 /* Wellspend_APPApp.swift */; };
-		30CDEAB72A70376000381CE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAB62A70376000381CE8 /* ContentView.swift */; };
 		30CDEAB92A70376100381CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CDEAB82A70376100381CE8 /* Assets.xcassets */; };
 		30CDEABD2A70376100381CE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CDEABC2A70376100381CE8 /* Preview Assets.xcassets */; };
+		30CDEAC52A70380E00381CE8 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAC42A70380E00381CE8 /* Dashboard.swift */; };
+		30CDEAC72A703AC200381CE8 /* MoneyGroupingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAC62A703AC200381CE8 /* MoneyGroupingCard.swift */; };
+		30CDEACA2A703B3D00381CE8 /* GroupingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAC92A703B3D00381CE8 /* GroupingDataModel.swift */; };
+		30CDEACC2A81558000381CE8 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEACB2A81558000381CE8 /* TransactionRowView.swift */; };
+		30CDEACE2A8155B000381CE8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEACD2A8155B000381CE8 /* Transaction.swift */; };
+		30CDEAD02A853DAC00381CE8 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEACF2A853DAC00381CE8 /* TransactionListView.swift */; };
+		30CDEAD22A853E3A00381CE8 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD12A853E3A00381CE8 /* FakeData.swift */; };
+		30CDEAD42A85406100381CE8 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */; };
+		30CDEAD72A8542D700381CE8 /* displayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD62A8542D700381CE8 /* displayFunctions.swift */; };
+		30CDEAD92A8663A500381CE8 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30CDEAB12A70376000381CE8 /* Wellspend APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wellspend APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CDEAB42A70376000381CE8 /* Wellspend_APPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wellspend_APPApp.swift; sourceTree = "<group>"; };
-		30CDEAB62A70376000381CE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30CDEAB82A70376100381CE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CDEABA2A70376100381CE8 /* Wellspend_APP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wellspend_APP.entitlements; sourceTree = "<group>"; };
 		30CDEABC2A70376100381CE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30CDEAC42A70380E00381CE8 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		30CDEAC62A703AC200381CE8 /* MoneyGroupingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyGroupingCard.swift; sourceTree = "<group>"; };
+		30CDEAC92A703B3D00381CE8 /* GroupingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupingDataModel.swift; sourceTree = "<group>"; };
+		30CDEACB2A81558000381CE8 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		30CDEACD2A8155B000381CE8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		30CDEACF2A853DAC00381CE8 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		30CDEAD12A853E3A00381CE8 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		30CDEAD62A8542D700381CE8 /* displayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayFunctions.swift; sourceTree = "<group>"; };
+		30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +70,10 @@
 		30CDEAB32A70376000381CE8 /* Wellspend APP */ = {
 			isa = PBXGroup;
 			children = (
+				30CDEAD52A8542C100381CE8 /* utils */,
+				30CDEAC82A703B2D00381CE8 /* model */,
+				30CDEAC32A70380300381CE8 /* Views */,
 				30CDEAB42A70376000381CE8 /* Wellspend_APPApp.swift */,
-				30CDEAB62A70376000381CE8 /* ContentView.swift */,
 				30CDEAB82A70376100381CE8 /* Assets.xcassets */,
 				30CDEABA2A70376100381CE8 /* Wellspend_APP.entitlements */,
 				30CDEABB2A70376100381CE8 /* Preview Content */,
@@ -67,6 +87,37 @@
 				30CDEABC2A70376100381CE8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30CDEAC32A70380300381CE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30CDEAC42A70380E00381CE8 /* Dashboard.swift */,
+				30CDEAC62A703AC200381CE8 /* MoneyGroupingCard.swift */,
+				30CDEACB2A81558000381CE8 /* TransactionRowView.swift */,
+				30CDEACF2A853DAC00381CE8 /* TransactionListView.swift */,
+				30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */,
+				30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30CDEAC82A703B2D00381CE8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				30CDEAC92A703B3D00381CE8 /* GroupingDataModel.swift */,
+				30CDEACD2A8155B000381CE8 /* Transaction.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		30CDEAD52A8542C100381CE8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				30CDEAD12A853E3A00381CE8 /* FakeData.swift */,
+				30CDEAD62A8542D700381CE8 /* displayFunctions.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +190,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30CDEAB72A70376000381CE8 /* ContentView.swift in Sources */,
+				30CDEAD22A853E3A00381CE8 /* FakeData.swift in Sources */,
+				30CDEACE2A8155B000381CE8 /* Transaction.swift in Sources */,
+				30CDEAD72A8542D700381CE8 /* displayFunctions.swift in Sources */,
+				30CDEAD02A853DAC00381CE8 /* TransactionListView.swift in Sources */,
+				30CDEAD42A85406100381CE8 /* TransactionDetailView.swift in Sources */,
+				30CDEACA2A703B3D00381CE8 /* GroupingDataModel.swift in Sources */,
+				30CDEACC2A81558000381CE8 /* TransactionRowView.swift in Sources */,
+				30CDEAC52A70380E00381CE8 /* Dashboard.swift in Sources */,
 				30CDEAB52A70376000381CE8 /* Wellspend_APPApp.swift in Sources */,
+				30CDEAC72A703AC200381CE8 /* MoneyGroupingCard.swift in Sources */,
+				30CDEAD92A8663A500381CE8 /* EditTransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
