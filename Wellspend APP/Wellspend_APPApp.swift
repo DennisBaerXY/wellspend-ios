@@ -9,15 +9,33 @@ import SwiftUI
 
 @main
 struct Wellspend_APPApp: App {
-	@State private var transactions = transactionsFake
+	@StateObject private var store = TransactionStore()
 	@State private var accounts = accountsFake
     var body: some Scene {
 		
         WindowGroup {
 			NavigationStack {
-				Dashboard(transactions: $transactions,accounts: $accounts)
+				Dashboard(transactions: $store.transactions,accounts: $accounts)
+				{
+					Task{
+						do	 {
+							try await store.save(transactions: store.transactions )
+						} catch {
+							fatalError(error.localizedDescription)
+						}
+					}
+				}
+					.task {
+						do	 {
+							try await store.load()
+						} catch {
+							fatalError(error.localizedDescription)
+						}
+					}
 			}
       
         }
     }
+	
+	
 }

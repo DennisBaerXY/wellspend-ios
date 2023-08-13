@@ -20,6 +20,8 @@
 		30CDEAD42A85406100381CE8 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */; };
 		30CDEAD72A8542D700381CE8 /* displayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD62A8542D700381CE8 /* displayFunctions.swift */; };
 		30CDEAD92A8663A500381CE8 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */; };
+		30CDEADD2A8923CA00381CE8 /* NewTransactionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEADC2A8923CA00381CE8 /* NewTransactionSheet.swift */; };
+		30CDEADF2A893C7800381CE8 /* TransactionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDEADE2A893C7800381CE8 /* TransactionStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		30CDEAD62A8542D700381CE8 /* displayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayFunctions.swift; sourceTree = "<group>"; };
 		30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionView.swift; sourceTree = "<group>"; };
+		30CDEADC2A8923CA00381CE8 /* NewTransactionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionSheet.swift; sourceTree = "<group>"; };
+		30CDEADE2A893C7800381CE8 /* TransactionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				30CDEACF2A853DAC00381CE8 /* TransactionListView.swift */,
 				30CDEAD32A85406100381CE8 /* TransactionDetailView.swift */,
 				30CDEAD82A8663A500381CE8 /* EditTransactionView.swift */,
+				30CDEADC2A8923CA00381CE8 /* NewTransactionSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				30CDEAC92A703B3D00381CE8 /* GroupingDataModel.swift */,
 				30CDEACD2A8155B000381CE8 /* Transaction.swift */,
+				30CDEADE2A893C7800381CE8 /* TransactionStore.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -194,11 +200,13 @@
 				30CDEACE2A8155B000381CE8 /* Transaction.swift in Sources */,
 				30CDEAD72A8542D700381CE8 /* displayFunctions.swift in Sources */,
 				30CDEAD02A853DAC00381CE8 /* TransactionListView.swift in Sources */,
+				30CDEADF2A893C7800381CE8 /* TransactionStore.swift in Sources */,
 				30CDEAD42A85406100381CE8 /* TransactionDetailView.swift in Sources */,
 				30CDEACA2A703B3D00381CE8 /* GroupingDataModel.swift in Sources */,
 				30CDEACC2A81558000381CE8 /* TransactionRowView.swift in Sources */,
 				30CDEAC52A70380E00381CE8 /* Dashboard.swift in Sources */,
 				30CDEAB52A70376000381CE8 /* Wellspend_APPApp.swift in Sources */,
+				30CDEADD2A8923CA00381CE8 /* NewTransactionSheet.swift in Sources */,
 				30CDEAC72A703AC200381CE8 /* MoneyGroupingCard.swift in Sources */,
 				30CDEAD92A8663A500381CE8 /* EditTransactionView.swift in Sources */,
 			);
@@ -329,16 +337,18 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Wellspend;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -367,16 +377,18 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Wellspend;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

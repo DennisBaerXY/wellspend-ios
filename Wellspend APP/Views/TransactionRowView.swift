@@ -18,7 +18,9 @@ struct TransactionRowView: View {
 				Text(transaction.category.name).font(.subheadline)
 			}.padding(.horizontal)
 			Spacer()
-			Text(getMoneyDisplay(val: transaction.amount)).font(.body).foregroundColor(getColor(val: transaction.amount))
+			Text(getMoneyDisplay(val: transaction.amount))
+				.font(.body)
+				.foregroundColor(getColor(val: transaction.amount))
 			
 		
 			

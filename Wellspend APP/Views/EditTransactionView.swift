@@ -16,6 +16,14 @@ struct EditTransactionView: View {
 				TextField("Name",text: $transaction.shopname)
 				TextField("Category", text: $transaction.category.name)
 				TextField("Amount",value: $transaction.amount, format: .currency(code: "EUR"))
+				
+				Picker("Type", selection: $transaction.type) {
+					ForEach(TransactionModel.TransactionType.allCases) { type in
+						Text(type.rawValue.capitalized)
+					}
+				}
+					
+				
 				DatePicker("Date", selection: $transaction.date,in: ...Date())
 				
 			}
@@ -26,7 +34,7 @@ struct EditTransactionView: View {
 				if !transaction.tags.isEmpty {
 					HStack {
 						ForEach(transaction.tags, id: \.id) { tag in
-							Text(tag.name).padding(.all,8).background(.yellow).cornerRadius(12)
+							Text(tag.name).padding(.all,8).background(.yellow).foregroundColor(.black).cornerRadius(12)
 							
 						}.onDelete { indicies in
 							transaction.tags.remove(atOffsets: indicies)

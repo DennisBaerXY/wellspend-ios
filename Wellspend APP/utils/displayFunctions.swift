@@ -11,7 +11,7 @@ import SwiftUI
 
 
 func getColor(val amount: Float) -> Color {
-	return amount > 0 ? .green : .red
+	return amount >= 0 ? .green : .red
 }
 
 func getMoneyDisplay(val amount: Float) -> String {

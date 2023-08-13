@@ -10,13 +10,23 @@ import SwiftUI
 struct Dashboard: View {
 	@Binding var transactions: [TransactionModel]
 	@Binding var accounts: [AccountModel]
+	@Environment(\.scenePhase) private var scenePhase
+	@State private var isPresentingNewTransaction = false
+	
+	private var sumamount: Float {
+		get {
+			return calculateRemainingMoney(transactions: transactions)
+		}
+	}
+	
+	let saveAction: () ->Void
     var body: some View {
 		VStack {
 			
 			HStack {
 				
-				Text("+3000€")
-					.foregroundColor(Color.green)
+				Text(getMoneyDisplay(val: sumamount))
+					.foregroundColor(getColor(val: sumamount))
 					.font(.largeTitle)
 			}
 			Divider()
@@ -44,20 +54,48 @@ struct Dashboard: View {
 			HStack{
 				Text("Last Transactions").font(.headline)
 				Spacer()
-				NavigationLink(destination: EmptyView()) {
+				
+				Button {
+					isPresentingNewTransaction = true
+				} label: {
 					Label("Add",systemImage: "plus")
 				}
+
+				
+				
 			}
+			
 		
 			
 			TransactionListView(transactions: $transactions)
+				
+			
 			
 			
 			Spacer()
 			
 		}.navigationTitle("Dashboard")
 			.padding(.all)
+		
+			.sheet(isPresented: $isPresentingNewTransaction) {
+				NewTransactionSheet(isPresentingNewTransactionView: $isPresentingNewTransaction, transactions: $transactions)
+			}
+			.onChange(of: scenePhase) { phase in
+				if phase == .inactive {saveAction()}
+			}
     }
+	
+	func calculateRemainingMoney(transactions: [TransactionModel]) -> Float {
+		var sum: Float = 0
+		for transaction in transactions {
+			if(transaction.type == .transaction) {continue}
+			sum += transaction.amount
+		}
+		
+		
+	
+		return sum
+	}
 	
 	func calculateTotalFromAccounts(accounts: [AccountModel]) -> Float {
 		var total: Float = 0.0
@@ -77,7 +115,7 @@ struct Dashboard_Previews: PreviewProvider {
 		
 
 		NavigationStack {
-			Dashboard(transactions: .constant(transactionsFake), accounts: .constant(accountsFake))
+			Dashboard(transactions: .constant([]), accounts: .constant(accountsFake),saveAction: {})
 		}
 	}
 }

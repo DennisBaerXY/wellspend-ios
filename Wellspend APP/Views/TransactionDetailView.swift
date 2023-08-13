@@ -48,7 +48,7 @@ struct TransactionDetailView: View {
 				HStack {
 					Label("Date",systemImage: "calendar")
 					Spacer()
-					Text(transaction.date.formatted(date: .numeric, time: .omitted))
+					Text(transaction.date,style: .date)
 				}
 					
 				HStack {
